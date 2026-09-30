@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Book Details | Local Book Exchange</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+
+  <body>
+    <div class="admin-layout">
+      <aside class="admin-sidebar" id="adminSidebar">
+        <div class="admin-logo">
+          <img src="../assets/images/logo.png" alt="Logo" />
+
+          <span> Book Exchange </span>
+        </div>
+
+        <ul class="admin-menu">
+          <li class="admin-menu-title">Main</li>
+
+          <li>
+            <a href="dashboard.html"> 🏠 Dashboard </a>
+          </li>
+
+          <li>
+            <a href="users.html"> 👥 Users </a>
+          </li>
+
+          <li>
+            <a href="books.html" class="active"> 📚 Books </a>
+          </li>
+
+          <li>
+            <a href="exchange-requests.html"> 🔄 Exchanges </a>
+          </li>
+
+          <li>
+            <a href="categories.html"> 🗂 Categories </a>
+          </li>
+
+          <li class="admin-menu-title">Management</li>
+
+          <li>
+            <a href="messages.html"> 💬 Messages </a>
+          </li>
+
+          <li>
+            <a href="reports.html"> 📊 Reports </a>
+          </li>
+
+          <li>
+            <a href="profile.html"> 👤 Profile </a>
+          </li>
+
+          <li>
+            <a href="login.html" id="logoutBtn"> 🚪 Logout </a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-topbar">
+          <button class="admin-menu-toggle" id="adminMenuToggle" type="button">
+            ☰
+          </button>
+
+          <div class="admin-search">
+            🔍
+
+            <input type="search" placeholder="Search..." />
+          </div>
+
+          <div class="admin-user">
+            <strong> Administrator </strong>
+
+            <img src="../assets/images/logo.png" alt="Admin" />
+          </div>
+        </header>
+
+        <section class="admin-content">
+          <div class="admin-page-header">
+            <div>
+              <h1>Book Details</h1>
+
+              <p>View complete information about this book.</p>
+            </div>
+
+            <a href="books.html" class="btn btn-light"> ← Back to Books </a>
+          </div>
+
+          <div class="book-details-layout">
+            <div class="book-details-image">
+              <img
+                src="../assets/images/book-placeholder.svg"
+                alt="Book Cover"
+                id="bookImage"
+              />
+            </div>
+
+            <div class="book-details-content">
+              <span class="badge badge-success" id="bookStatus">
+                Available
+              </span>
+
+              <br /><br />
+
+              <h1 id="bookTitle">Book Title</h1>
+
+              <p class="book-details-author" id="bookAuthor">by Author Name</p>
+
+              <p class="book-description" id="bookDescription">
+                Book description will appear here.
+              </p>
+
+              <div class="book-info-grid">
+                <div class="book-info-item">
+                  <small> Category </small>
+
+                  <strong id="bookCategory"> - </strong>
+                </div>
+
+                <div class="book-info-item">
+                  <small> Condition </small>
+
+                  <strong id="bookCondition"> - </strong>
+                </div>
+
+                <div class="book-info-item">
+                  <small> Owner </small>
+
+                  <strong id="bookOwner"> - </strong>
+                </div>
+
+                <div class="book-info-item">
+                  <small> Location </small>
+
+                  <strong id="bookLocation"> - </strong>
+                </div>
+
+                <div class="book-info-item">
+                  <small> Added Date </small>
+
+                  <strong id="bookAddedDate"> - </strong>
+                </div>
+
+                <div class="book-info-item">
+                  <small> Book ID </small>
+
+                  <strong id="bookId"> - </strong>
+                </div>
+              </div>
+
+              <br />
+
+              <button
+                type="button"
+                class="btn btn-success"
+                id="activateBookBtn"
+              >
+                Activate Book
+              </button>
+
+              <button type="button" class="btn btn-danger" id="removeBookBtn">
+                Remove Book
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Books | Local Book Exchange</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/user.css" />
+  </head>
+
+  <body class="user-layout">
+    <header class="user-topbar">
+      <a href="dashboard.html" class="user-logo">
+        <img src="../assets/images/logo.png" alt="Logo" />
+
+        <span> Local Book Exchange </span>
+      </a>
+
+      <nav class="user-nav">
+        <a href="dashboard.html"> Dashboard </a>
+
+        <a href="browse-books.html"> Browse Books </a>
+
+        <a href="my-books.html" class="active"> My Books </a>
+
+        <a href="my-exchanges.html"> Exchanges </a>
+
+        <a href="messages.html"> Messages </a>
+      </nav>
+
+      <div class="user-actions">
+        <a href="wishlist.html" class="nav-icon"> ❤️ </a>
+
+        <a href="profile.html">
+          <img
+            src="../assets/images/logo.png"
+            class="profile-avatar"
+            alt="Profile"
+          />
+        </a>
+      </div>
+    </header>
+
+    <main class="user-dashboard">
+      <section class="page-section">
+        <div class="page-header">
+          <div>
+            <h1>My Books</h1>
+
+            <p>Manage books you have listed for exchange.</p>
+          </div>
+
+          <a href="add-book.html" class="btn btn-dark"> + Add Book </a>
+        </div>
+
+        <div class="card">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="myBookSearch"> Search </label>
+
+              <input
+                type="search"
+                id="myBookSearch"
+                class="form-control"
+                placeholder="Search your books..."
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="myBookStatus"> Status </label>
+
+              <select id="myBookStatus" class="form-control">
+                <option value="">All Books</option>
+
+                <option value="available">Available</option>
+
+                <option value="reserved">Reserved</option>
+
+                <option value="exchanged">Exchanged</option>
+
+                <option value="inactive">Inactive</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="book-grid" id="myBooksGrid">
+          <div class="empty-state">
+            <img src="../assets/images/book-placeholder.svg" alt="No books" />
+
+            <h3>No books added yet</h3>
+
+            <p>Add your first book and start exchanging.</p>
+
+            <a href="add-book.html" class="btn btn-dark"> Add Book </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/user.js"></script>
+  </body>
+</html>

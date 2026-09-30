@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact | Local Book Exchange</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <header class="public-navbar">
+      <a href="index.html" class="logo"> 📚 Local Book Exchange </a>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html"> Home </a>
+          </li>
+
+          <li>
+            <a href="about.html"> About </a>
+          </li>
+
+          <li>
+            <a href="how-it-works.html"> How It Works </a>
+          </li>
+
+          <li>
+            <a href="contact.html" class="active"> Contact </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="navbar-actions">
+        <a href="user/login.html" class="btn btn-light" data-login-link>
+          Login
+        </a>
+
+        <a href="user/register.html" class="btn btn-dark" data-login-link>
+          Register
+        </a>
+
+        <a
+          href="user/dashboard.html"
+          class="btn btn-dark"
+          data-dashboard-link
+          style="display: none"
+        >
+          Dashboard
+        </a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Contact Us</h1>
+
+        <p>Have a question or need help? Send us a message.</p>
+      </div>
+    </section>
+
+    <main>
+      <section class="page-section">
+        <div class="container">
+          <div class="grid grid-2">
+            <div>
+              <div class="card">
+                <h2>Get in Touch</h2>
+
+                <br />
+
+                <p>
+                  Use the contact form to send your question, feedback or
+                  support request.
+                </p>
+
+                <br />
+
+                <div style="display: grid; gap: 20px">
+                  <div>
+                    <strong> 📚 Platform </strong>
+
+                    <p>Local Book Exchange</p>
+                  </div>
+
+                  <div>
+                    <strong> 💬 Support </strong>
+
+                    <p>Use this page to contact the administrator.</p>
+                  </div>
+
+                  <div>
+                    <strong> 🔄 Book Exchanges </strong>
+
+                    <p>
+                      Login to your account to manage book exchange requests.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="card">
+                <h2>Send Message</h2>
+
+                <br />
+
+                <div id="contactMessage"></div>
+
+                <form id="contactForm">
+                  <div class="form-group">
+                    <label for="name"> Your Name </label>
+
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="form-control"
+                      placeholder="Enter your name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email"> Email Address </label>
+
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="subject"> Subject </label>
+
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      class="form-control"
+                      placeholder="Enter message subject"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="message"> Message </label>
+
+                    <textarea
+                      id="message"
+                      name="message"
+                      class="form-control"
+                      placeholder="Write your message..."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-dark btn-full">
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>📚 Local Book Exchange</h3>
+
+            <p>Discover and exchange books with local readers.</p>
+          </div>
+
+          <div>
+            <h4>Explore</h4>
+
+            <a href="index.html"> Home </a>
+
+            <a href="about.html"> About </a>
+
+            <a href="how-it-works.html"> How It Works </a>
+          </div>
+
+          <div>
+            <h4>Account</h4>
+
+            <a href="user/register.html"> Register </a>
+
+            <a href="user/login.html"> Login </a>
+          </div>
+
+          <div>
+            <h4>Help</h4>
+
+            <a href="contact.html"> Contact </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          © 2026 Local Book Exchange. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/public.js"></script>
+  </body>
+</html>

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>User Details | Local Book Exchange</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+
+  <body>
+    <div class="admin-layout">
+      <aside class="admin-sidebar" id="adminSidebar">
+        <div class="admin-logo">
+          <img src="../assets/images/logo.png" alt="Logo" />
+          <span>Book Exchange</span>
+        </div>
+
+        <ul class="admin-menu">
+          <li class="admin-menu-title">Main</li>
+
+          <li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+          <li>
+            <a href="users.html" class="active"> 👥 Users </a>
+          </li>
+
+          <li><a href="books.html">📚 Books</a></li>
+
+          <li>
+            <a href="exchange-requests.html"> 🔄 Exchanges </a>
+          </li>
+
+          <li><a href="categories.html">🗂 Categories</a></li>
+
+          <li class="admin-menu-title">Management</li>
+
+          <li><a href="messages.html">💬 Messages</a></li>
+          <li><a href="reports.html">📊 Reports</a></li>
+          <li><a href="profile.html">👤 Profile</a></li>
+          <li><a href="login.html" id="logoutBtn">🚪 Logout</a></li>
+        </ul>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-topbar">
+          <button class="admin-menu-toggle" id="adminMenuToggle" type="button">
+            ☰
+          </button>
+
+          <div class="admin-search">
+            🔍
+
+            <input type="search" placeholder="Search..." />
+          </div>
+
+          <div class="admin-user">
+            <strong>Administrator</strong>
+
+            <img src="../assets/images/logo.png" alt="Admin" />
+          </div>
+        </header>
+
+        <section class="admin-content">
+          <div class="admin-page-header">
+            <div>
+              <h1>User Details</h1>
+
+              <p>View complete information about the selected user.</p>
+            </div>
+
+            <a href="users.html" class="btn btn-light"> ← Back </a>
+          </div>
+
+          <div class="admin-profile-card">
+            <div class="admin-profile-cover"></div>
+
+            <div class="admin-profile-body">
+              <img
+                src="../assets/images/logo.png"
+                class="admin-profile-image"
+                id="userProfileImage"
+                alt="User"
+              />
+
+              <h2 id="userName">User Name</h2>
+
+              <p id="userEmail">user@example.com</p>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="admin-stats">
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon">📚</div>
+
+              <div>
+                <div class="admin-stat-value" id="userBookCount">0</div>
+
+                <div class="admin-stat-label">Books Listed</div>
+              </div>
+            </div>
+
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon">🔄</div>
+
+              <div>
+                <div class="admin-stat-value" id="userExchangeCount">0</div>
+
+                <div class="admin-stat-label">Exchanges</div>
+              </div>
+            </div>
+
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon">❤️</div>
+
+              <div>
+                <div class="admin-stat-value" id="userWishlistCount">0</div>
+
+                <div class="admin-stat-label">Wishlist Books</div>
+              </div>
+            </div>
+
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon">💬</div>
+
+              <div>
+                <div class="admin-stat-value" id="userMessageCount">0</div>
+
+                <div class="admin-stat-label">Messages</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-grid">
+            <div class="admin-card">
+              <div class="admin-card-header">
+                <h3>Personal Information</h3>
+              </div>
+
+              <div class="book-info-grid">
+                <div class="book-info-item">
+                  <small>Full Name</small>
+                  <strong id="detailName">-</strong>
+                </div>
+
+                <div class="book-info-item">
+                  <small>Email</small>
+                  <strong id="detailEmail">-</strong>
+                </div>
+
+                <div class="book-info-item">
+                  <small>Phone Number</small>
+                  <strong id="detailPhone">-</strong>
+                </div>
+
+                <div class="book-info-item">
+                  <small>Location</small>
+                  <strong id="detailLocation">-</strong>
+                </div>
+
+                <div class="book-info-item">
+                  <small>Account Status</small>
+                  <strong id="detailStatus">Active</strong>
+                </div>
+
+                <div class="book-info-item">
+                  <small>Joined Date</small>
+                  <strong id="detailJoined">-</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="admin-card">
+              <div class="admin-card-header">
+                <h3>Account Actions</h3>
+              </div>
+
+              <button
+                class="btn btn-success btn-full"
+                id="activateUserBtn"
+                type="button"
+              >
+                Activate User
+              </button>
+
+              <br /><br />
+
+              <button
+                class="btn btn-danger btn-full"
+                id="blockUserBtn"
+                type="button"
+              >
+                Block User
+              </button>
+
+              <br /><br />
+
+              <button
+                class="btn btn-light btn-full"
+                id="deleteUserBtn"
+                type="button"
+              >
+                Delete User
+              </button>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <h3>User Books</h3>
+            </div>
+
+            <div class="admin-table-wrapper">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Book</th>
+                    <th>Category</th>
+                    <th>Condition</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+
+                <tbody id="userBooksTable">
+                  <tr>
+                    <td colspan="4">No books found for this user.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>

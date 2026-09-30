@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Admin Profile | Local Book Exchange</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+
+  <body>
+    <div class="admin-layout">
+      <aside class="admin-sidebar" id="adminSidebar">
+        <div class="admin-logo">
+          <img src="../assets/images/logo.png" alt="Logo" />
+
+          <span> Book Exchange </span>
+        </div>
+
+        <ul class="admin-menu">
+          <li class="admin-menu-title">Main</li>
+
+          <li>
+            <a href="dashboard.html"> 🏠 Dashboard </a>
+          </li>
+
+          <li>
+            <a href="users.html"> 👥 Users </a>
+          </li>
+
+          <li>
+            <a href="books.html"> 📚 Books </a>
+          </li>
+
+          <li>
+            <a href="exchange-requests.html"> 🔄 Exchanges </a>
+          </li>
+
+          <li>
+            <a href="categories.html"> 🗂 Categories </a>
+          </li>
+
+          <li class="admin-menu-title">Management</li>
+
+          <li>
+            <a href="messages.html"> 💬 Messages </a>
+          </li>
+
+          <li>
+            <a href="reports.html"> 📊 Reports </a>
+          </li>
+
+          <li>
+            <a href="profile.html" class="active"> 👤 Profile </a>
+          </li>
+
+          <li>
+            <a href="login.html" id="logoutBtn"> 🚪 Logout </a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-topbar">
+          <button class="admin-menu-toggle" id="adminMenuToggle" type="button">
+            ☰
+          </button>
+
+          <div class="admin-search">
+            🔍
+
+            <input type="search" placeholder="Search..." />
+          </div>
+
+          <div class="admin-user">
+            <strong id="topAdminName"> Administrator </strong>
+
+            <img src="../assets/images/logo.png" alt="Admin" />
+          </div>
+        </header>
+
+        <section class="admin-content">
+          <div class="admin-page-header">
+            <div>
+              <h1>Admin Profile</h1>
+
+              <p>Manage your administrator account.</p>
+            </div>
+          </div>
+
+          <!-- PROFILE -->
+          <div class="admin-profile-card">
+            <div class="admin-profile-cover"></div>
+
+            <div class="admin-profile-body">
+              <img
+                src="../assets/images/logo.png"
+                class="admin-profile-image"
+                alt="Admin"
+              />
+
+              <h2 id="profileAdminName">Administrator</h2>
+
+              <p id="profileAdminEmail">admin@example.com</p>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="admin-grid">
+            <!-- PROFILE FORM -->
+            <div class="admin-card">
+              <div class="admin-card-header">
+                <h3>Profile Information</h3>
+              </div>
+
+              <div id="profileMessage"></div>
+
+              <form id="adminProfileForm">
+                <div class="form-group">
+                  <label for="adminFullName"> Full Name </label>
+
+                  <input
+                    type="text"
+                    id="adminFullName"
+                    class="form-control"
+                    placeholder="Administrator"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="adminEmail"> Email Address </label>
+
+                  <input
+                    type="email"
+                    id="adminEmail"
+                    class="form-control"
+                    placeholder="admin@example.com"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="adminPhone"> Phone Number </label>
+
+                  <input
+                    type="tel"
+                    id="adminPhone"
+                    class="form-control"
+                    placeholder="Enter phone number"
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-dark">Save Changes</button>
+              </form>
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="admin-card">
+              <div class="admin-card-header">
+                <h3>Change Password</h3>
+              </div>
+
+              <div id="passwordMessage"></div>
+
+              <form id="adminPasswordForm">
+                <div class="form-group">
+                  <label for="currentPassword"> Current Password </label>
+
+                  <input
+                    type="password"
+                    id="currentPassword"
+                    class="form-control"
+                    placeholder="Current password"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="newPassword"> New Password </label>
+
+                  <input
+                    type="password"
+                    id="newPassword"
+                    class="form-control"
+                    placeholder="New password"
+                    minlength="6"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="confirmPassword"> Confirm Password </label>
+
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    class="form-control"
+                    placeholder="Confirm new password"
+                    minlength="6"
+                    required
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-dark">
+                  Change Password
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <h3>Account Information</h3>
+            </div>
+
+            <div class="book-info-grid">
+              <div class="book-info-item">
+                <small> Role </small>
+
+                <strong> Administrator </strong>
+              </div>
+
+              <div class="book-info-item">
+                <small> Account Status </small>
+
+                <strong> Active </strong>
+              </div>
+
+              <div class="book-info-item">
+                <small> Last Login </small>
+
+                <strong id="adminLastLogin"> - </strong>
+              </div>
+
+              <div class="book-info-item">
+                <small> Account Created </small>
+
+                <strong id="adminCreatedAt"> - </strong>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>

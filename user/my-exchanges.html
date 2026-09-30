@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Exchanges | Local Book Exchange</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/user.css" />
+  </head>
+
+  <body class="user-layout">
+    <header class="user-topbar">
+      <a href="dashboard.html" class="user-logo">
+        <img src="../assets/images/logo.png" alt="Logo" />
+
+        <span> Local Book Exchange </span>
+      </a>
+
+      <nav class="user-nav">
+        <a href="dashboard.html"> Dashboard </a>
+
+        <a href="browse-books.html"> Browse Books </a>
+
+        <a href="my-books.html"> My Books </a>
+
+        <a href="my-exchanges.html" class="active"> Exchanges </a>
+
+        <a href="messages.html"> Messages </a>
+      </nav>
+
+      <div class="user-actions">
+        <a href="wishlist.html" class="nav-icon"> ❤️ </a>
+
+        <a href="profile.html">
+          <img
+            src="../assets/images/logo.png"
+            class="profile-avatar"
+            alt="Profile"
+          />
+        </a>
+      </div>
+    </header>
+
+    <main class="user-dashboard">
+      <section class="page-section">
+        <div class="page-header">
+          <div>
+            <h1>My Exchanges</h1>
+
+            <p>Track all sent and received exchange requests.</p>
+          </div>
+
+          <a href="exchange-requests.html" class="btn btn-light">
+            Incoming Requests
+          </a>
+        </div>
+
+        <!-- STATISTICS -->
+
+        <div class="user-stats">
+          <div class="stat-card">
+            <div class="stat-icon">⏳</div>
+
+            <div class="stat-value" id="pendingExchangeCount">0</div>
+
+            <div class="stat-label">Pending</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">👍</div>
+
+            <div class="stat-value" id="acceptedExchangeCount">0</div>
+
+            <div class="stat-label">Accepted</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">✅</div>
+
+            <div class="stat-value" id="completedExchangeCount">0</div>
+
+            <div class="stat-label">Completed</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">❌</div>
+
+            <div class="stat-value" id="rejectedExchangeCount">0</div>
+
+            <div class="stat-label">Rejected</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="exchangeSearch"> Search </label>
+
+              <input
+                type="search"
+                id="exchangeSearch"
+                class="form-control"
+                placeholder="Search exchanges..."
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="exchangeStatus"> Status </label>
+
+              <select id="exchangeStatus" class="form-control">
+                <option value="">All Exchanges</option>
+
+                <option value="pending">Pending</option>
+
+                <option value="accepted">Accepted</option>
+
+                <option value="rejected">Rejected</option>
+
+                <option value="completed">Completed</option>
+
+                <option value="cancelled">Cancelled</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <br />
+
+        <div id="myExchangeList">
+          <div class="empty-state">
+            <h3>No exchanges yet</h3>
+
+            <p>Browse books and send your first exchange request.</p>
+
+            <a href="browse-books.html" class="btn btn-dark"> Browse Books </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/user.js"></script>
+  </body>
+</html>

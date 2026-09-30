@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Reports | Local Book Exchange</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+
+  <body>
+    <div class="admin-layout">
+      <aside class="admin-sidebar" id="adminSidebar">
+        <div class="admin-logo">
+          <img src="../assets/images/logo.png" alt="Logo" />
+
+          <span> Book Exchange </span>
+        </div>
+
+        <ul class="admin-menu">
+          <li class="admin-menu-title">Main</li>
+
+          <li>
+            <a href="dashboard.html"> 🏠 Dashboard </a>
+          </li>
+
+          <li>
+            <a href="users.html"> 👥 Users </a>
+          </li>
+
+          <li>
+            <a href="books.html"> 📚 Books </a>
+          </li>
+
+          <li>
+            <a href="exchange-requests.html"> 🔄 Exchanges </a>
+          </li>
+
+          <li>
+            <a href="categories.html"> 🗂 Categories </a>
+          </li>
+
+          <li class="admin-menu-title">Management</li>
+
+          <li>
+            <a href="messages.html"> 💬 Messages </a>
+          </li>
+
+          <li>
+            <a href="reports.html" class="active"> 📊 Reports </a>
+          </li>
+
+          <li>
+            <a href="profile.html"> 👤 Profile </a>
+          </li>
+
+          <li>
+            <a href="login.html" id="logoutBtn"> 🚪 Logout </a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-topbar">
+          <button class="admin-menu-toggle" id="adminMenuToggle" type="button">
+            ☰
+          </button>
+
+          <div class="admin-search">
+            🔍
+
+            <input type="search" placeholder="Search..." />
+          </div>
+
+          <div class="admin-user">
+            <strong> Administrator </strong>
+
+            <img src="../assets/images/logo.png" alt="Admin" />
+          </div>
+        </header>
+
+        <section class="admin-content">
+          <div class="admin-page-header">
+            <div>
+              <h1>Reports & Statistics</h1>
+
+              <p>View platform activity and exchange statistics.</p>
+            </div>
+
+            <button type="button" class="btn btn-dark" id="exportReportBtn">
+              Export Report
+            </button>
+          </div>
+
+          <div class="report-grid">
+            <div class="report-card">
+              <h3>Total Users</h3>
+
+              <p>Registered users on the platform</p>
+
+              <div class="admin-stat-value" id="reportUsers">0</div>
+            </div>
+
+            <div class="report-card">
+              <h3>Books Listed</h3>
+
+              <p>Books currently registered</p>
+
+              <div class="admin-stat-value" id="reportBooks">0</div>
+            </div>
+
+            <div class="report-card">
+              <h3>Completed Exchanges</h3>
+
+              <p>Successfully exchanged books</p>
+
+              <div class="admin-stat-value" id="reportCompleted">0</div>
+            </div>
+
+            <div class="report-card">
+              <h3>Pending Requests</h3>
+
+              <p>Requests waiting for action</p>
+
+              <div class="admin-stat-value" id="reportPending">0</div>
+            </div>
+
+            <div class="report-card">
+              <h3>Categories</h3>
+
+              <p>Available book categories</p>
+
+              <div class="admin-stat-value" id="reportCategories">0</div>
+            </div>
+
+            <div class="report-card">
+              <h3>Messages</h3>
+
+              <p>Messages exchanged by users</p>
+
+              <div class="admin-stat-value" id="reportMessages">0</div>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="admin-grid">
+            <div class="admin-card">
+              <div class="admin-card-header">
+                <h3>Most Popular Categories</h3>
+              </div>
+
+              <div class="admin-table-wrapper">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th>Category</th>
+
+                      <th>Books</th>
+
+                      <th>Exchanges</th>
+                    </tr>
+                  </thead>
+
+                  <tbody id="popularCategoryTable">
+                    <tr>
+                      <td colspan="3">No report data available.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="admin-card">
+              <div class="admin-card-header">
+                <h3>Exchange Summary</h3>
+              </div>
+
+              <div class="book-info-grid">
+                <div class="book-info-item">
+                  <small> Pending </small>
+
+                  <strong id="summaryPending"> 0 </strong>
+                </div>
+
+                <div class="book-info-item">
+                  <small> Accepted </small>
+
+                  <strong id="summaryAccepted"> 0 </strong>
+                </div>
+
+                <div class="book-info-item">
+                  <small> Completed </small>
+
+                  <strong id="summaryCompleted"> 0 </strong>
+                </div>
+
+                <div class="book-info-item">
+                  <small> Rejected </small>
+
+                  <strong id="summaryRejected"> 0 </strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>

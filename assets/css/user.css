@@ -1,0 +1,969 @@
+/* =========================================================
+   LOCAL BOOK EXCHANGE
+   USER PANEL
+   ========================================================= */
+
+/* =========================================================
+   USER LAYOUT
+   ========================================================= */
+
+.user-layout {
+  min-height: 100vh;
+
+  background: #f4f7f5;
+}
+
+/* =========================================================
+   USER TOPBAR
+   ========================================================= */
+
+.user-topbar {
+  width: calc(100% - 30px);
+
+  margin: 15px auto 0;
+
+  background: #d8ffa1;
+
+  border-radius: 22px 22px 0 0;
+
+  padding: 16px 28px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  position: relative;
+
+  z-index: 50;
+}
+
+.user-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 19px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.user-logo img {
+  width: 40px;
+  height: 40px;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+}
+
+.user-nav a {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition: 0.25s ease;
+
+  white-space: nowrap;
+}
+
+.user-nav a:hover,
+.user-nav a.active {
+  opacity: 0.55;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.user-actions .nav-icon {
+  background: white;
+}
+
+.user-actions .profile-avatar {
+  background: white;
+}
+
+/* =========================================================
+   USER DASHBOARD HERO
+   ========================================================= */
+
+.user-welcome {
+  width: calc(100% - 30px);
+
+  margin: 0 auto 30px;
+
+  padding: 50px 7%;
+
+  min-height: 250px;
+
+  background: #d8ffa1;
+
+  border-radius: 0 0 22px 22px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.user-welcome::before {
+  content: "";
+
+  position: absolute;
+
+  width: 230px;
+  height: 80px;
+
+  border: 25px solid rgba(166, 231, 70, 0.25);
+
+  border-radius: 60px;
+
+  left: -90px;
+
+  top: 50px;
+}
+
+.user-welcome::after {
+  content: "";
+
+  position: absolute;
+
+  width: 210px;
+  height: 80px;
+
+  border: 25px solid rgba(166, 231, 70, 0.25);
+
+  border-radius: 60px;
+
+  right: -70px;
+
+  bottom: 30px;
+}
+
+.welcome-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+.welcome-content h1 {
+  font-size: 42px;
+
+  font-weight: 800;
+
+  margin-bottom: 8px;
+}
+
+.welcome-content p {
+  color: #506046;
+
+  max-width: 700px;
+}
+
+/* =========================================================
+   USER DASHBOARD
+   ========================================================= */
+
+.user-dashboard {
+  width: 92%;
+
+  max-width: 1280px;
+
+  margin: auto;
+
+  padding-bottom: 50px;
+}
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  gap: 22px;
+}
+
+.dashboard-column {
+  display: grid;
+
+  gap: 22px;
+
+  align-content: start;
+}
+
+/* =========================================================
+   USER STATS
+   ========================================================= */
+
+.user-stats {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 22px;
+}
+
+.stat-card {
+  background: white;
+
+  border: 1px solid #e4e9e3;
+
+  border-radius: 16px;
+
+  padding: 20px;
+
+  transition: 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.stat-icon {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 12px;
+
+  background: #d8ffa1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 14px;
+
+  font-size: 20px;
+}
+
+.stat-value {
+  font-size: 28px;
+
+  font-weight: 800;
+}
+
+.stat-label {
+  color: #6f776e;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   RECENT BOOKS
+   ========================================================= */
+
+.recent-books {
+  background: white;
+
+  border-radius: 16px;
+
+  border: 1px solid #e4e9e3;
+
+  padding: 22px;
+
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.04);
+}
+
+.mini-book {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 12px 0;
+
+  border-bottom: 1px solid #edf0ed;
+}
+
+.mini-book:last-child {
+  border-bottom: none;
+}
+
+.mini-book img {
+  width: 48px;
+  height: 62px;
+
+  border-radius: 7px;
+
+  object-fit: cover;
+
+  background: #efffd8;
+}
+
+.mini-book-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.mini-book-info h4 {
+  font-size: 14px;
+
+  margin-bottom: 3px;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.mini-book-info p {
+  color: #6f776e;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   EXCHANGE REQUEST ITEM
+   ========================================================= */
+
+.exchange-item {
+  background: white;
+
+  border: 1px solid #e4e9e3;
+
+  border-radius: 14px;
+
+  padding: 18px;
+
+  margin-bottom: 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.exchange-user {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.exchange-user img {
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  background: #efffd8;
+}
+
+.exchange-user h4 {
+  font-size: 14px;
+}
+
+.exchange-user p {
+  color: #6f776e;
+
+  font-size: 12px;
+}
+
+.exchange-actions {
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.profile-card {
+  background: white;
+
+  border-radius: 18px;
+
+  border: 1px solid #e4e9e3;
+
+  overflow: hidden;
+
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.04);
+}
+
+.profile-cover {
+  height: 150px;
+
+  background: #d8ffa1;
+
+  position: relative;
+}
+
+.profile-cover::after {
+  content: "";
+
+  position: absolute;
+
+  right: -50px;
+
+  top: 25px;
+
+  width: 200px;
+  height: 65px;
+
+  border: 20px solid rgba(166, 231, 70, 0.25);
+
+  border-radius: 50px;
+}
+
+.profile-info {
+  padding: 0 28px 28px;
+}
+
+.profile-photo {
+  width: 105px;
+  height: 105px;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+
+  border: 6px solid white;
+
+  background: #f4f7f5;
+
+  margin-top: -52px;
+
+  margin-bottom: 10px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.profile-info h2 {
+  margin-bottom: 3px;
+}
+
+.profile-info p {
+  color: #6f776e;
+}
+
+/* =========================================================
+   BOOK DETAILS
+   ========================================================= */
+
+.book-details-layout {
+  display: grid;
+
+  grid-template-columns: 360px 1fr;
+
+  gap: 35px;
+
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  border: 1px solid #e4e9e3;
+
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.04);
+}
+
+.book-details-image {
+  background: #efffd8;
+
+  border-radius: 15px;
+
+  padding: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  min-height: 400px;
+}
+
+.book-details-image img {
+  width: 100%;
+
+  max-width: 280px;
+
+  max-height: 390px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+}
+
+.book-details-content {
+  min-width: 0;
+}
+
+.book-details-content h1 {
+  font-size: 32px;
+
+  margin-top: 12px;
+
+  margin-bottom: 5px;
+}
+
+.book-details-author {
+  color: #6f776e;
+
+  margin-bottom: 20px;
+}
+
+.book-description {
+  margin: 22px 0;
+
+  color: #515a50;
+}
+
+.book-info-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin: 20px 0;
+}
+
+.book-info-item {
+  background: #f8faf8;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  border: 1px solid #eef1ed;
+}
+
+.book-info-item small {
+  display: block;
+
+  color: #777f75;
+
+  margin-bottom: 3px;
+}
+
+.book-info-item strong {
+  font-size: 14px;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+   WISHLIST
+   ========================================================= */
+
+.wishlist-button {
+  width: 38px;
+  height: 38px;
+
+  min-width: 38px;
+
+  border-radius: 50%;
+
+  border: 1px solid #e4e9e3;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+
+  transition: 0.25s ease;
+}
+
+.wishlist-button:hover,
+.wishlist-button.active {
+  background: #d8ffa1;
+
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.message-layout {
+  display: grid;
+
+  grid-template-columns: 320px 1fr;
+
+  background: white;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  min-height: 600px;
+
+  border: 1px solid #e4e9e3;
+
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.04);
+}
+
+.chat-list {
+  border-right: 1px solid #e4e9e3;
+
+  background: white;
+
+  overflow-y: auto;
+
+  max-height: 650px;
+}
+
+.chat-list-header {
+  padding: 20px;
+
+  border-bottom: 1px solid #e4e9e3;
+
+  position: sticky;
+
+  top: 0;
+
+  background: white;
+
+  z-index: 5;
+}
+
+.chat-user {
+  display: flex;
+
+  gap: 11px;
+
+  align-items: center;
+
+  padding: 14px 18px;
+
+  cursor: pointer;
+
+  border-bottom: 1px solid #f0f2f0;
+
+  transition: 0.2s ease;
+}
+
+.chat-user:hover,
+.chat-user.active {
+  background: #f1ffde;
+}
+
+.chat-user img {
+  width: 45px;
+  height: 45px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  background: #efffd8;
+}
+
+.chat-user-info {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.chat-user-info strong {
+  display: block;
+
+  font-size: 14px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.chat-user-info small {
+  display: block;
+
+  color: #6f776e;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.chat-window {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.chat-header {
+  min-height: 65px;
+
+  padding: 17px 20px;
+
+  border-bottom: 1px solid #e4e9e3;
+
+  font-weight: 700;
+
+  background: white;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.chat-messages {
+  flex: 1;
+
+  padding: 20px;
+
+  overflow-y: auto;
+
+  background: #fafcfa;
+
+  max-height: 520px;
+}
+
+.message {
+  max-width: 70%;
+
+  padding: 11px 15px;
+
+  margin-bottom: 10px;
+
+  border-radius: 14px;
+
+  font-size: 14px;
+
+  word-break: break-word;
+}
+
+.message.received {
+  background: white;
+
+  border: 1px solid #e4e9e3;
+
+  border-bottom-left-radius: 4px;
+}
+
+.message.sent {
+  background: #d8ffa1;
+
+  margin-left: auto;
+
+  border-bottom-right-radius: 4px;
+}
+
+.message-time {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 10px;
+
+  color: #70796e;
+
+  text-align: right;
+}
+
+.chat-input {
+  display: flex;
+
+  gap: 10px;
+
+  padding: 15px;
+
+  border-top: 1px solid #e4e9e3;
+
+  background: white;
+}
+
+.chat-input input {
+  flex: 1;
+
+  min-width: 0;
+
+  border: 1px solid #e4e9e3;
+
+  border-radius: 25px;
+
+  padding: 11px 17px;
+
+  outline: none;
+}
+
+.chat-input input:focus {
+  border-color: #a9e64b;
+
+  box-shadow: 0 0 0 3px rgba(200, 255, 115, 0.2);
+}
+
+/* =========================================================
+   BOOK FORM IMAGE PREVIEW
+   ========================================================= */
+
+#imagePreviewContainer {
+  padding: 15px;
+
+  background: #f8faf8;
+
+  border-radius: 12px;
+
+  border: 1px dashed #cfd6cd;
+}
+
+/* =========================================================
+   USER TABLE HELPER
+   ========================================================= */
+
+.user-table-wrapper {
+  overflow-x: auto;
+
+  background: white;
+
+  border-radius: 16px;
+
+  border: 1px solid #e4e9e3;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .user-nav {
+    gap: 18px;
+  }
+
+  .user-nav a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .user-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .book-details-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .book-details-image {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 850px) {
+  .user-nav {
+    display: none;
+  }
+
+  .message-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-list {
+    border-right: none;
+
+    border-bottom: 1px solid #e4e9e3;
+
+    max-height: 250px;
+  }
+
+  .chat-messages {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 650px) {
+  .user-topbar {
+    padding: 14px 18px;
+  }
+
+  .user-logo span {
+    display: none;
+  }
+
+  .user-welcome {
+    padding: 40px 22px;
+  }
+
+  .user-actions {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 550px) {
+  .user-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-content h1 {
+    font-size: 32px;
+  }
+
+  .book-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exchange-item {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .exchange-actions {
+    width: 100%;
+  }
+
+  .exchange-actions .btn {
+    flex: 1;
+  }
+
+  .book-details-layout {
+    padding: 20px;
+  }
+
+  .book-details-content h1 {
+    font-size: 27px;
+  }
+
+  .message {
+    max-width: 85%;
+  }
+
+  .chat-input {
+    padding: 10px;
+  }
+
+  .chat-input .btn {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}

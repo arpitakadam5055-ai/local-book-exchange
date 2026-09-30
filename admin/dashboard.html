@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Admin Dashboard | Local Book Exchange</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+
+  <body>
+    <div class="admin-layout">
+      <!-- SIDEBAR -->
+      <aside class="admin-sidebar" id="adminSidebar">
+        <div class="admin-logo">
+          <img src="../assets/images/logo.png" alt="Logo" />
+          <span>Book Exchange</span>
+        </div>
+
+        <ul class="admin-menu">
+          <li class="admin-menu-title">Main</li>
+
+          <li>
+            <a href="dashboard.html" class="active"> 🏠 Dashboard </a>
+          </li>
+
+          <li>
+            <a href="users.html"> 👥 Users </a>
+          </li>
+
+          <li>
+            <a href="books.html"> 📚 Books </a>
+          </li>
+
+          <li>
+            <a href="exchange-requests.html"> 🔄 Exchanges </a>
+          </li>
+
+          <li>
+            <a href="categories.html"> 🗂 Categories </a>
+          </li>
+
+          <li class="admin-menu-title">Management</li>
+
+          <li>
+            <a href="messages.html"> 💬 Messages </a>
+          </li>
+
+          <li>
+            <a href="reports.html"> 📊 Reports </a>
+          </li>
+
+          <li>
+            <a href="profile.html"> 👤 Profile </a>
+          </li>
+
+          <li>
+            <a href="login.html" id="logoutBtn"> 🚪 Logout </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="admin-main">
+        <!-- TOPBAR -->
+        <header class="admin-topbar">
+          <button class="admin-menu-toggle" id="adminMenuToggle" type="button">
+            ☰
+          </button>
+
+          <div class="admin-search">
+            🔍
+            <input type="search" placeholder="Search..." id="dashboardSearch" />
+          </div>
+
+          <div class="admin-user">
+            <div>
+              <strong id="adminName">Administrator</strong>
+              <small style="display: block; color: #6f776e"> Admin </small>
+            </div>
+
+            <img src="../assets/images/logo.png" alt="Admin" />
+          </div>
+        </header>
+
+        <!-- CONTENT -->
+        <section class="admin-content">
+          <div class="admin-page-header">
+            <div>
+              <h1>Dashboard</h1>
+              <p>Overview of your Local Book Exchange platform.</p>
+            </div>
+          </div>
+
+          <!-- BANNER -->
+          <div class="admin-banner">
+            <h2>
+              Welcome back, <span id="welcomeAdminName">Administrator</span> 👋
+            </h2>
+
+            <p>Manage users, books, exchange requests and platform activity.</p>
+          </div>
+
+          <!-- STATISTICS -->
+          <div class="admin-stats">
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon">👥</div>
+
+              <div>
+                <div class="admin-stat-value" id="totalUsers">0</div>
+
+                <div class="admin-stat-label">Total Users</div>
+              </div>
+            </div>
+
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon">📚</div>
+
+              <div>
+                <div class="admin-stat-value" id="totalBooks">0</div>
+
+                <div class="admin-stat-label">Total Books</div>
+              </div>
+            </div>
+
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon">🔄</div>
+
+              <div>
+                <div class="admin-stat-value" id="totalExchanges">0</div>
+
+                <div class="admin-stat-label">Exchange Requests</div>
+              </div>
+            </div>
+
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon">✅</div>
+
+              <div>
+                <div class="admin-stat-value" id="completedExchanges">0</div>
+
+                <div class="admin-stat-label">Completed Exchanges</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- GRID -->
+          <div class="admin-grid">
+            <!-- RECENT EXCHANGES -->
+            <div class="admin-card">
+              <div class="admin-card-header">
+                <h3>Recent Exchange Requests</h3>
+
+                <a href="exchange-requests.html" class="btn btn-light">
+                  View All
+                </a>
+              </div>
+
+              <div class="admin-table-wrapper">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th>User</th>
+                      <th>Requested Book</th>
+                      <th>Status</th>
+                      <th>Date</th>
+                    </tr>
+                  </thead>
+
+                  <tbody id="recentExchangeTable">
+                    <tr>
+                      <td colspan="4">No exchange requests available.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- RECENT BOOKS -->
+            <div class="admin-card">
+              <div class="admin-card-header">
+                <h3>Recently Added Books</h3>
+
+                <a href="books.html" class="btn btn-light"> View All </a>
+              </div>
+
+              <div id="recentBooks">
+                <div class="admin-book-item">
+                  <img src="../assets/images/book-placeholder.svg" alt="Book" />
+
+                  <div class="admin-book-info">
+                    <h4>No books available</h4>
+
+                    <p>Newly added books will appear here.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>

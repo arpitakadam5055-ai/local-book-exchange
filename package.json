@@ -1,0 +1,30 @@
+{
+  "name": "local-book-exchange",
+  "version": "1.0.0",
+  "description": "A local community platform for listing, discovering and exchanging books.",
+  "main": "api/index.js",
+  "private": true,
+  "scripts": {
+    "start": "node api/index.js",
+    "dev": "node api/index.js",
+    "create-admin": "node scripts/create-admin.js"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.3"
+  },
+  "keywords": [
+    "book-exchange",
+    "nodejs",
+    "postgresql",
+    "neon",
+    "vercel"
+  ],
+  "author": "",
+  "license": "ISC"
+}

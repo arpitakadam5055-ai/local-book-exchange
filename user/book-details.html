@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Book Details | Local Book Exchange</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/user.css" />
+  </head>
+
+  <body class="user-layout">
+    <header class="user-topbar">
+      <a href="dashboard.html" class="user-logo">
+        <img src="../assets/images/logo.png" alt="Logo" />
+
+        <span> Local Book Exchange </span>
+      </a>
+
+      <nav class="user-nav">
+        <a href="dashboard.html"> Dashboard </a>
+
+        <a href="browse-books.html" class="active"> Browse Books </a>
+
+        <a href="my-books.html"> My Books </a>
+
+        <a href="my-exchanges.html"> Exchanges </a>
+
+        <a href="messages.html"> Messages </a>
+      </nav>
+
+      <div class="user-actions">
+        <a href="wishlist.html" class="nav-icon"> ❤️ </a>
+
+        <a href="profile.html">
+          <img
+            src="../assets/images/logo.png"
+            class="profile-avatar"
+            alt="Profile"
+          />
+        </a>
+      </div>
+    </header>
+
+    <main class="user-dashboard">
+      <section class="page-section">
+        <div class="page-header">
+          <div>
+            <h1>Book Details</h1>
+
+            <p>View book information and send an exchange request.</p>
+          </div>
+
+          <a href="browse-books.html" class="btn btn-light"> ← Browse Books </a>
+        </div>
+
+        <div class="book-details-layout">
+          <div class="book-details-image">
+            <img
+              src="../assets/images/book-placeholder.svg"
+              alt="Book"
+              id="bookImage"
+            />
+          </div>
+
+          <div class="book-details-content">
+            <div
+              style="display: flex; justify-content: space-between; gap: 15px"
+            >
+              <span class="badge badge-success" id="bookAvailability">
+                Available
+              </span>
+
+              <button
+                type="button"
+                class="wishlist-button"
+                id="wishlistButton"
+                title="Add to wishlist"
+              >
+                ♡
+              </button>
+            </div>
+
+            <h1 id="bookTitle">Book Title</h1>
+
+            <p class="book-details-author" id="bookAuthor">by Author Name</p>
+
+            <p class="book-description" id="bookDescription">
+              Book description will appear here.
+            </p>
+
+            <div class="book-info-grid">
+              <div class="book-info-item">
+                <small> Category </small>
+
+                <strong id="bookCategory"> - </strong>
+              </div>
+
+              <div class="book-info-item">
+                <small> Condition </small>
+
+                <strong id="bookCondition"> - </strong>
+              </div>
+
+              <div class="book-info-item">
+                <small> Language </small>
+
+                <strong id="bookLanguage"> - </strong>
+              </div>
+
+              <div class="book-info-item">
+                <small> Publication Year </small>
+
+                <strong id="bookYear"> - </strong>
+              </div>
+
+              <div class="book-info-item">
+                <small> Owner </small>
+
+                <strong id="bookOwner"> - </strong>
+              </div>
+
+              <div class="book-info-item">
+                <small> Location </small>
+
+                <strong id="bookLocation"> - </strong>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-dark" id="requestExchangeBtn">
+              Request Exchange
+            </button>
+
+            <button type="button" class="btn btn-light" id="messageOwnerBtn">
+              Message Owner
+            </button>
+          </div>
+        </div>
+
+        <br />
+
+        <div
+          class="card"
+          id="exchangeRequestFormContainer"
+          style="display: none"
+        >
+          <div class="card-header">
+            <h3 class="card-title">Send Exchange Request</h3>
+          </div>
+
+          <div id="exchangeRequestMessage"></div>
+
+          <form id="exchangeRequestForm">
+            <input type="hidden" id="requestedBookId" />
+
+            <div class="form-group">
+              <label for="offeredBook"> Select a Book to Offer </label>
+
+              <select id="offeredBook" class="form-control" required>
+                <option value="">Select Your Book</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="requestMessage"> Message </label>
+
+              <textarea
+                id="requestMessage"
+                class="form-control"
+                placeholder="Write a short message to the book owner..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-dark">Send Request</button>
+
+            <button type="button" class="btn btn-light" id="cancelExchangeBtn">
+              Cancel
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/user.js"></script>
+
+    <script>
+      const requestButton = document.getElementById("requestExchangeBtn");
+
+      const cancelButton = document.getElementById("cancelExchangeBtn");
+
+      const requestContainer = document.getElementById(
+        "exchangeRequestFormContainer",
+      );
+
+      requestButton.addEventListener("click", function () {
+        requestContainer.style.display = "block";
+        requestContainer.scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+
+      cancelButton.addEventListener("click", function () {
+        requestContainer.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

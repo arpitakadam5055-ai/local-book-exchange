@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Local Book Exchange helps readers discover, share and exchange books with people in their local community."
+    />
+
+    <title>Local Book Exchange</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- ========================================================
+     NAVBAR
+     ======================================================== -->
+
+    <header class="public-navbar">
+      <a href="index.html" class="logo"> 📚 Local Book Exchange </a>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html" class="active"> Home </a>
+          </li>
+
+          <li>
+            <a href="about.html"> About </a>
+          </li>
+
+          <li>
+            <a href="how-it-works.html"> How It Works </a>
+          </li>
+
+          <li>
+            <a href="contact.html"> Contact </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="navbar-actions">
+        <a href="user/login.html" class="btn btn-light" data-login-link>
+          Login
+        </a>
+
+        <a href="user/register.html" class="btn btn-dark" data-login-link>
+          Register
+        </a>
+
+        <a
+          href="user/dashboard.html"
+          class="btn btn-dark"
+          data-dashboard-link
+          style="display: none"
+        >
+          Dashboard
+        </a>
+      </div>
+    </header>
+
+    <!-- ========================================================
+     HERO
+     ======================================================== -->
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>
+          Exchange Books.
+          <br />
+          Connect With Readers.
+        </h1>
+
+        <p>
+          Find books near you, share the books you already own and discover your
+          next favourite read.
+        </p>
+
+        <div class="search-box">
+          <input
+            type="search"
+            placeholder="Search by title, author or category..."
+            aria-label="Search Books"
+          />
+
+          <button type="button">Search</button>
+        </div>
+
+        <div
+          style="
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+          "
+        >
+          <a href="user/register.html" class="btn btn-dark" data-login-link>
+            Join Community
+          </a>
+
+          <a href="user/browse-books.html" class="btn btn-light">
+            Browse Books
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+     CATEGORIES
+     ======================================================== -->
+
+    <section class="page-section">
+      <div class="container">
+        <div class="page-header">
+          <div>
+            <h2>Browse by Category</h2>
+
+            <p>Find books that match your interests.</p>
+          </div>
+
+          <a href="user/browse-books.html" class="btn btn-light"> View All </a>
+        </div>
+
+        <div class="grid grid-4" id="publicCategories">
+          <div class="card">
+            <h3>Loading categories...</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+     FEATURED BOOKS
+     ======================================================== -->
+
+    <section class="page-section">
+      <div class="container">
+        <div class="page-header">
+          <div>
+            <h2>Recently Added Books</h2>
+
+            <p>Discover books recently shared by the community.</p>
+          </div>
+
+          <a href="user/browse-books.html" class="btn btn-dark">
+            Browse All Books
+          </a>
+        </div>
+
+        <div class="book-grid" id="featuredBooks">
+          <div class="empty-state">
+            <h3>Loading books...</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+     HOW IT WORKS
+     ======================================================== -->
+
+    <section class="page-section">
+      <div class="container">
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 35px">
+          <h2>How Local Book Exchange Works</h2>
+
+          <p style="color: #6f776e">Exchange books in a few simple steps.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <div style="font-size: 36px; margin-bottom: 15px">📚</div>
+
+            <h3>1. Add Your Books</h3>
+
+            <p>
+              List the books you own and are willing to exchange with another
+              reader.
+            </p>
+          </div>
+
+          <div class="card">
+            <div style="font-size: 36px; margin-bottom: 15px">🔍</div>
+
+            <h3>2. Discover Books</h3>
+
+            <p>
+              Search books by title, author, category, condition or location.
+            </p>
+          </div>
+
+          <div class="card">
+            <div style="font-size: 36px; margin-bottom: 15px">🔄</div>
+
+            <h3>3. Exchange</h3>
+
+            <p>
+              Send an exchange request, communicate with the owner and complete
+              the exchange.
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px">
+          <a href="how-it-works.html" class="btn btn-primary"> Learn More </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+     COMMUNITY SECTION
+     ======================================================== -->
+
+    <section class="page-section">
+      <div class="container">
+        <div
+          class="card"
+          style="background: #d8ffa1; padding: 45px; text-align: center"
+        >
+          <h2>Give Your Books a New Reader</h2>
+
+          <p style="max-width: 650px; margin: 10px auto 25px">
+            Instead of leaving books unused on your shelf, exchange them with
+            people nearby and discover something new to read.
+          </p>
+
+          <a href="user/register.html" class="btn btn-dark" data-login-link>
+            Create Free Account
+          </a>
+
+          <a
+            href="user/dashboard.html"
+            class="btn btn-dark"
+            data-dashboard-link
+            style="display: none"
+          >
+            Go to Dashboard
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+     FOOTER
+     ======================================================== -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>📚 Local Book Exchange</h3>
+
+            <p>
+              A community platform for discovering, sharing and exchanging books
+              locally.
+            </p>
+          </div>
+
+          <div>
+            <h4>Explore</h4>
+
+            <a href="index.html"> Home </a>
+
+            <a href="about.html"> About </a>
+
+            <a href="how-it-works.html"> How It Works </a>
+          </div>
+
+          <div>
+            <h4>Account</h4>
+
+            <a href="user/register.html"> Register </a>
+
+            <a href="user/login.html"> User Login </a>
+
+            <a href="admin/login.html"> Admin Login </a>
+          </div>
+
+          <div>
+            <h4>Help</h4>
+
+            <a href="contact.html"> Contact Us </a>
+
+            <a href="user/browse-books.html"> Browse Books </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          © 2026 Local Book Exchange. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/public.js"></script>
+  </body>
+</html>
+
+

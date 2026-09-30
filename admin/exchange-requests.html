@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Exchange Requests | Local Book Exchange</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+
+  <body>
+    <div class="admin-layout">
+      <aside class="admin-sidebar" id="adminSidebar">
+        <div class="admin-logo">
+          <img src="../assets/images/logo.png" alt="Logo" />
+
+          <span> Book Exchange </span>
+        </div>
+
+        <ul class="admin-menu">
+          <li class="admin-menu-title">Main</li>
+
+          <li>
+            <a href="dashboard.html"> 🏠 Dashboard </a>
+          </li>
+
+          <li>
+            <a href="users.html"> 👥 Users </a>
+          </li>
+
+          <li>
+            <a href="books.html"> 📚 Books </a>
+          </li>
+
+          <li>
+            <a href="exchange-requests.html" class="active"> 🔄 Exchanges </a>
+          </li>
+
+          <li>
+            <a href="categories.html"> 🗂 Categories </a>
+          </li>
+
+          <li class="admin-menu-title">Management</li>
+
+          <li>
+            <a href="messages.html"> 💬 Messages </a>
+          </li>
+
+          <li>
+            <a href="reports.html"> 📊 Reports </a>
+          </li>
+
+          <li>
+            <a href="profile.html"> 👤 Profile </a>
+          </li>
+
+          <li>
+            <a href="login.html" id="logoutBtn"> 🚪 Logout </a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-topbar">
+          <button class="admin-menu-toggle" id="adminMenuToggle" type="button">
+            ☰
+          </button>
+
+          <div class="admin-search">
+            🔍
+
+            <input
+              id="exchangeSearch"
+              type="search"
+              placeholder="Search exchanges..."
+            />
+          </div>
+
+          <div class="admin-user">
+            <strong> Administrator </strong>
+
+            <img src="../assets/images/logo.png" alt="Admin" />
+          </div>
+        </header>
+
+        <section class="admin-content">
+          <div class="admin-page-header">
+            <div>
+              <h1>Exchange Requests</h1>
+
+              <p>Monitor book exchange requests between users.</p>
+            </div>
+          </div>
+
+          <div class="card" style="margin-bottom: 20px">
+            <div class="form-row">
+              <div class="form-group">
+                <label> Status </label>
+
+                <select class="form-control" id="exchangeStatusFilter">
+                  <option value="">All Requests</option>
+
+                  <option value="pending">Pending</option>
+
+                  <option value="accepted">Accepted</option>
+
+                  <option value="rejected">Rejected</option>
+
+                  <option value="completed">Completed</option>
+
+                  <option value="cancelled">Cancelled</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label> Date </label>
+
+                <input
+                  type="date"
+                  class="form-control"
+                  id="exchangeDateFilter"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-table-wrapper">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+
+                  <th>Requester</th>
+
+                  <th>Book Owner</th>
+
+                  <th>Requested Book</th>
+
+                  <th>Offered Book</th>
+
+                  <th>Status</th>
+
+                  <th>Date</th>
+
+                  <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody id="exchangeTableBody">
+                <tr>
+                  <td colspan="8">No exchange requests found.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>

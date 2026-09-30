@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Admin Login | Local Book Exchange</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+
+  <body>
+    <div class="auth-page">
+      <div class="auth-card">
+        <div class="auth-logo">
+          <img src="../assets/images/logo.png" alt="Local Book Exchange Logo" />
+        </div>
+
+        <h1>Admin Login</h1>
+
+        <p class="subtitle">Sign in to manage Local Book Exchange</p>
+
+        <div id="loginMessage"></div>
+
+        <form id="adminLoginForm">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="admin@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Enter password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-dark btn-full">Login</button>
+        </form>
+
+        <div class="auth-footer">
+          <p>
+            <a href="../index.html"> ← Back to Website </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>

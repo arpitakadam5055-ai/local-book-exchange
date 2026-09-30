@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Exchange Requests | Local Book Exchange</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/user.css" />
+  </head>
+
+  <body class="user-layout">
+    <header class="user-topbar">
+      <a href="dashboard.html" class="user-logo">
+        <img src="../assets/images/logo.png" alt="Logo" />
+
+        <span> Local Book Exchange </span>
+      </a>
+
+      <nav class="user-nav">
+        <a href="dashboard.html"> Dashboard </a>
+
+        <a href="browse-books.html"> Browse Books </a>
+
+        <a href="my-books.html"> My Books </a>
+
+        <a href="my-exchanges.html" class="active"> Exchanges </a>
+
+        <a href="messages.html"> Messages </a>
+      </nav>
+
+      <div class="user-actions">
+        <a href="wishlist.html" class="nav-icon"> ❤️ </a>
+
+        <a href="profile.html">
+          <img
+            src="../assets/images/logo.png"
+            class="profile-avatar"
+            alt="Profile"
+          />
+        </a>
+      </div>
+    </header>
+
+    <main class="user-dashboard">
+      <section class="page-section">
+        <div class="page-header">
+          <div>
+            <h1>Incoming Exchange Requests</h1>
+
+            <p>Accept or reject requests for your books.</p>
+          </div>
+
+          <a href="my-exchanges.html" class="btn btn-light"> My Exchanges </a>
+        </div>
+
+        <div class="card">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="requestSearch"> Search </label>
+
+              <input
+                type="search"
+                id="requestSearch"
+                class="form-control"
+                placeholder="Search requester or book..."
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="requestStatusFilter"> Status </label>
+
+              <select id="requestStatusFilter" class="form-control">
+                <option value="">All Requests</option>
+
+                <option value="pending">Pending</option>
+
+                <option value="accepted">Accepted</option>
+
+                <option value="rejected">Rejected</option>
+
+                <option value="completed">Completed</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <br />
+
+        <div id="incomingExchangeRequests">
+          <div class="empty-state">
+            <h3>No incoming requests</h3>
+
+            <p>Requests from other users will appear here.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/user.js"></script>
+  </body>
+</html>

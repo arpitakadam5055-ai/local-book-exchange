@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Messages | Local Book Exchange</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/user.css" />
+
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+
+  <body>
+    <div class="admin-layout">
+      <aside class="admin-sidebar" id="adminSidebar">
+        <div class="admin-logo">
+          <img src="../assets/images/logo.png" alt="Logo" />
+
+          <span> Book Exchange </span>
+        </div>
+
+        <ul class="admin-menu">
+          <li class="admin-menu-title">Main</li>
+
+          <li>
+            <a href="dashboard.html"> 🏠 Dashboard </a>
+          </li>
+
+          <li>
+            <a href="users.html"> 👥 Users </a>
+          </li>
+
+          <li>
+            <a href="books.html"> 📚 Books </a>
+          </li>
+
+          <li>
+            <a href="exchange-requests.html"> 🔄 Exchanges </a>
+          </li>
+
+          <li>
+            <a href="categories.html"> 🗂 Categories </a>
+          </li>
+
+          <li class="admin-menu-title">Management</li>
+
+          <li>
+            <a href="messages.html" class="active"> 💬 Messages </a>
+          </li>
+
+          <li>
+            <a href="reports.html"> 📊 Reports </a>
+          </li>
+
+          <li>
+            <a href="profile.html"> 👤 Profile </a>
+          </li>
+
+          <li>
+            <a href="login.html" id="logoutBtn"> 🚪 Logout </a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-topbar">
+          <button class="admin-menu-toggle" id="adminMenuToggle" type="button">
+            ☰
+          </button>
+
+          <div class="admin-search">
+            🔍
+
+            <input
+              id="messageSearch"
+              type="search"
+              placeholder="Search users..."
+            />
+          </div>
+
+          <div class="admin-user">
+            <strong> Administrator </strong>
+
+            <img src="../assets/images/logo.png" alt="Admin" />
+          </div>
+        </header>
+
+        <section class="admin-content">
+          <div class="admin-page-header">
+            <div>
+              <h1>Messages</h1>
+
+              <p>View communication and send administrative messages.</p>
+            </div>
+          </div>
+
+          <div class="message-layout">
+            <!-- USER LIST -->
+            <div class="chat-list">
+              <div class="chat-list-header">
+                <h3>Conversations</h3>
+
+                <br />
+
+                <input
+                  type="search"
+                  class="form-control"
+                  id="conversationSearch"
+                  placeholder="Search conversations"
+                />
+              </div>
+
+              <div id="conversationList">
+                <div class="empty-state">
+                  <h3>No conversations</h3>
+
+                  <p>User conversations will appear here.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CHAT -->
+            <div class="chat-window">
+              <div class="chat-header" id="chatHeader">
+                Select a conversation
+              </div>
+
+              <div class="chat-messages" id="chatMessages">
+                <div class="empty-state">
+                  <h3>Select a user</h3>
+
+                  <p>Choose a conversation to view messages.</p>
+                </div>
+              </div>
+
+              <form class="chat-input" id="adminMessageForm">
+                <input
+                  type="text"
+                  id="adminMessageInput"
+                  placeholder="Type a message..."
+                  autocomplete="off"
+                  required
+                />
+
+                <button type="submit" class="btn btn-dark">Send</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>

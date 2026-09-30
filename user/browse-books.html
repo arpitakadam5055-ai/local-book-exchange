@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Browse Books | Local Book Exchange</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/user.css" />
+  </head>
+
+  <body class="user-layout">
+    <header class="user-topbar">
+      <a href="dashboard.html" class="user-logo">
+        <img src="../assets/images/logo.png" alt="Logo" />
+
+        <span> Local Book Exchange </span>
+      </a>
+
+      <nav class="user-nav">
+        <a href="dashboard.html"> Dashboard </a>
+
+        <a href="browse-books.html" class="active"> Browse Books </a>
+
+        <a href="my-books.html"> My Books </a>
+
+        <a href="my-exchanges.html"> Exchanges </a>
+
+        <a href="messages.html"> Messages </a>
+      </nav>
+
+      <div class="user-actions">
+        <a href="wishlist.html" class="nav-icon"> ❤️ </a>
+
+        <a href="profile.html">
+          <img
+            src="../assets/images/logo.png"
+            class="profile-avatar"
+            alt="Profile"
+          />
+        </a>
+      </div>
+    </header>
+
+    <section class="user-welcome">
+      <div class="welcome-content">
+        <h1>Discover Your Next Book</h1>
+
+        <p>Search books available for exchange in your community.</p>
+
+        <br />
+
+        <div class="search-box">
+          <input
+            type="search"
+            id="browseSearch"
+            placeholder="Search title, author or category..."
+          />
+
+          <button type="button" id="browseSearchBtn">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <main class="user-dashboard">
+      <section class="page-section">
+        <div class="card">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="categoryFilter"> Category </label>
+
+              <select id="categoryFilter" class="form-control">
+                <option value="">All Categories</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="conditionFilter"> Condition </label>
+
+              <select id="conditionFilter" class="form-control">
+                <option value="">Any Condition</option>
+
+                <option value="new">Like New</option>
+
+                <option value="good">Good</option>
+
+                <option value="fair">Fair</option>
+
+                <option value="poor">Poor</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="locationFilter"> Location </label>
+
+              <input
+                type="text"
+                id="locationFilter"
+                class="form-control"
+                placeholder="Enter city or location"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="sortBooks"> Sort By </label>
+
+              <select id="sortBooks" class="form-control">
+                <option value="latest">Latest Added</option>
+
+                <option value="title">Title A-Z</option>
+
+                <option value="author">Author A-Z</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="page-header">
+          <div>
+            <h2>Available Books</h2>
+
+            <p>
+              <span id="browseBookCount">0</span>
+              books found
+            </p>
+          </div>
+        </div>
+
+        <div class="book-grid" id="browseBooksGrid">
+          <div class="empty-state">
+            <img src="../assets/images/book-placeholder.svg" alt="Books" />
+
+            <h3>No books found</h3>
+
+            <p>Available books will appear here.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/user.js"></script>
+  </body>
+</html>

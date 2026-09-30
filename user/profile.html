@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Profile | Local Book Exchange</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/user.css" />
+  </head>
+
+  <body class="user-layout">
+    <header class="user-topbar">
+      <a href="dashboard.html" class="user-logo">
+        <img src="../assets/images/logo.png" alt="Logo" />
+
+        <span> Local Book Exchange </span>
+      </a>
+
+      <nav class="user-nav">
+        <a href="dashboard.html"> Dashboard </a>
+
+        <a href="browse-books.html"> Browse Books </a>
+
+        <a href="my-books.html"> My Books </a>
+
+        <a href="my-exchanges.html"> Exchanges </a>
+
+        <a href="messages.html"> Messages </a>
+      </nav>
+
+      <div class="user-actions">
+        <a href="wishlist.html" class="nav-icon"> ❤️ </a>
+
+        <a href="profile.html">
+          <img
+            src="../assets/images/logo.png"
+            class="profile-avatar"
+            alt="Profile"
+          />
+        </a>
+      </div>
+    </header>
+
+    <main class="user-dashboard">
+      <section class="page-section">
+        <div class="page-header">
+          <div>
+            <h1>My Profile</h1>
+
+            <p>Manage your personal information and account.</p>
+          </div>
+
+          <button type="button" class="btn btn-light" id="logoutBtn">
+            Logout
+          </button>
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-cover"></div>
+
+          <div class="profile-info">
+            <img
+              src="../assets/images/logo.png"
+              alt="Profile"
+              class="profile-photo"
+              id="profilePhoto"
+            />
+
+            <h2 id="profileName">User Name</h2>
+
+            <p id="profileLocation">Location</p>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="grid grid-2">
+          <!-- PROFILE INFORMATION -->
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Personal Information</h3>
+            </div>
+
+            <div id="profileMessage"></div>
+
+            <form id="profileForm">
+              <div class="form-group">
+                <label for="fullName"> Full Name </label>
+
+                <input
+                  type="text"
+                  id="fullName"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email"> Email Address </label>
+
+                <input type="email" id="email" class="form-control" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone"> Phone Number </label>
+
+                <input type="tel" id="phone" class="form-control" />
+              </div>
+
+              <div class="form-group">
+                <label for="location"> Location </label>
+
+                <input
+                  type="text"
+                  id="location"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="bio"> About Me </label>
+
+                <textarea
+                  id="bio"
+                  class="form-control"
+                  placeholder="Tell other readers something about yourself..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-dark">Save Changes</button>
+            </form>
+          </div>
+
+          <!-- PASSWORD -->
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Change Password</h3>
+            </div>
+
+            <div id="passwordMessage"></div>
+
+            <form id="changePasswordForm">
+              <div class="form-group">
+                <label for="currentPassword"> Current Password </label>
+
+                <input
+                  type="password"
+                  id="currentPassword"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="newPassword"> New Password </label>
+
+                <input
+                  type="password"
+                  id="newPassword"
+                  class="form-control"
+                  minlength="6"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="confirmNewPassword"> Confirm New Password </label>
+
+                <input
+                  type="password"
+                  id="confirmNewPassword"
+                  class="form-control"
+                  minlength="6"
+                  required
+                />
+              </div>
+
+              <button type="submit" class="btn btn-dark">
+                Change Password
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/user.js"></script>
+  </body>
+</html>

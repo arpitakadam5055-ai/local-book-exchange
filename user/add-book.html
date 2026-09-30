@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Add Book | Local Book Exchange</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/user.css" />
+  </head>
+
+  <body class="user-layout">
+    <header class="user-topbar">
+      <a href="dashboard.html" class="user-logo">
+        <img src="../assets/images/logo.png" alt="Logo" />
+
+        <span> Local Book Exchange </span>
+      </a>
+
+      <nav class="user-nav">
+        <a href="dashboard.html"> Dashboard </a>
+
+        <a href="browse-books.html"> Browse Books </a>
+
+        <a href="my-books.html" class="active"> My Books </a>
+
+        <a href="my-exchanges.html"> Exchanges </a>
+
+        <a href="messages.html"> Messages </a>
+      </nav>
+
+      <div class="user-actions">
+        <a href="wishlist.html" class="nav-icon"> ❤️ </a>
+
+        <a href="profile.html">
+          <img
+            src="../assets/images/logo.png"
+            class="profile-avatar"
+            alt="Profile"
+          />
+        </a>
+      </div>
+    </header>
+
+    <main class="user-dashboard">
+      <section class="page-section">
+        <div class="page-header">
+          <div>
+            <h1>Add a Book</h1>
+
+            <p>List a book that you would like to exchange.</p>
+          </div>
+
+          <a href="my-books.html" class="btn btn-light"> ← My Books </a>
+        </div>
+
+        <div class="form-card">
+          <div id="addBookMessage"></div>
+
+          <form id="addBookForm" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="title"> Book Title * </label>
+
+              <input
+                type="text"
+                id="title"
+                name="title"
+                class="form-control"
+                placeholder="Enter book title"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="author"> Author * </label>
+
+              <input
+                type="text"
+                id="author"
+                name="author"
+                class="form-control"
+                placeholder="Enter author name"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="category"> Category * </label>
+
+                <select
+                  id="category"
+                  name="category"
+                  class="form-control"
+                  required
+                >
+                  <option value="">Select Category</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="condition"> Condition * </label>
+
+                <select
+                  id="condition"
+                  name="condition"
+                  class="form-control"
+                  required
+                >
+                  <option value="">Select Condition</option>
+
+                  <option value="new">Like New</option>
+
+                  <option value="good">Good</option>
+
+                  <option value="fair">Fair</option>
+
+                  <option value="poor">Poor</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="language"> Language </label>
+
+                <input
+                  type="text"
+                  id="language"
+                  name="language"
+                  class="form-control"
+                  placeholder="Example: English"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="publicationYear"> Publication Year </label>
+
+                <input
+                  type="number"
+                  id="publicationYear"
+                  name="publicationYear"
+                  class="form-control"
+                  min="1000"
+                  max="2100"
+                  placeholder="2024"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="description"> Description * </label>
+
+              <textarea
+                id="description"
+                name="description"
+                class="form-control"
+                placeholder="Describe the book and its condition"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="bookImage"> Book Cover </label>
+
+              <input
+                type="file"
+                id="bookImage"
+                name="bookImage"
+                class="form-control"
+                accept="image/*"
+              />
+            </div>
+
+            <div
+              id="imagePreviewContainer"
+              style="display: none; margin-bottom: 20px"
+            >
+              <img
+                id="imagePreview"
+                src=""
+                alt="Preview"
+                style="
+                  width: 150px;
+                  height: 200px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                "
+              />
+            </div>
+
+            <button type="submit" class="btn btn-dark btn-full">
+              Add Book
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/user.js"></script>
+
+    <script>
+      const imageInput = document.getElementById("bookImage");
+      const preview = document.getElementById("imagePreview");
+      const previewContainer = document.getElementById("imagePreviewContainer");
+
+      imageInput.addEventListener("change", function () {
+        const file = this.files[0];
+
+        if (!file) {
+          previewContainer.style.display = "none";
+          return;
+        }
+
+        preview.src = URL.createObjectURL(file);
+        previewContainer.style.display = "block";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Messages | Local Book Exchange</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/user.css" />
+  </head>
+
+  <body class="user-layout">
+    <header class="user-topbar">
+      <a href="dashboard.html" class="user-logo">
+        <img src="../assets/images/logo.png" alt="Logo" />
+
+        <span> Local Book Exchange </span>
+      </a>
+
+      <nav class="user-nav">
+        <a href="dashboard.html"> Dashboard </a>
+
+        <a href="browse-books.html"> Browse Books </a>
+
+        <a href="my-books.html"> My Books </a>
+
+        <a href="my-exchanges.html"> Exchanges </a>
+
+        <a href="messages.html" class="active"> Messages </a>
+      </nav>
+
+      <div class="user-actions">
+        <a href="wishlist.html" class="nav-icon"> ❤️ </a>
+
+        <a href="profile.html">
+          <img
+            src="../assets/images/logo.png"
+            class="profile-avatar"
+            alt="Profile"
+          />
+        </a>
+      </div>
+    </header>
+
+    <main class="user-dashboard">
+      <section class="page-section">
+        <div class="page-header">
+          <div>
+            <h1>Messages</h1>
+
+            <p>Chat with other users about book exchanges.</p>
+          </div>
+        </div>
+
+        <div class="message-layout">
+          <!-- CONVERSATIONS -->
+
+          <div class="chat-list">
+            <div class="chat-list-header">
+              <h3>Conversations</h3>
+
+              <br />
+
+              <input
+                type="search"
+                id="conversationSearch"
+                class="form-control"
+                placeholder="Search conversations..."
+              />
+            </div>
+
+            <div id="conversationList">
+              <div class="empty-state">
+                <h3>No conversations</h3>
+
+                <p>Your conversations will appear here.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CHAT WINDOW -->
+
+          <div class="chat-window">
+            <div class="chat-header" id="chatHeader">Select a conversation</div>
+
+            <div class="chat-messages" id="chatMessages">
+              <div class="empty-state">
+                <h3>Start chatting</h3>
+
+                <p>Select a conversation from the left.</p>
+              </div>
+            </div>
+
+            <form class="chat-input" id="messageForm">
+              <input
+                type="text"
+                id="messageInput"
+                placeholder="Type your message..."
+                autocomplete="off"
+                required
+              />
+
+              <button type="submit" class="btn btn-dark">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/user.js"></script>
+  </body>
+</html>
